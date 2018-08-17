@@ -1,0 +1,26 @@
+
+
+
+
+        <div class="card">
+                <div class="card-header" id="head{{regiao.id}}">
+                        <h5 class="mb-0">
+                                        <button class="btn btn-outline-primary" type="button" data-toggle="collapse" [attr.data-target]="'#collapsehead'+regiao.id" aria-expanded="true"
+                                        [attr.aria-controls]="'collapsehead'+regiao.id">
+                                        <b>{{regiao.id}} {{regiao.nome}}</b>
+                                </button>
+                        </h5>
+                </div>
+
+                <div id="collapsehead{{regiao.id}}" class="collapse" [attr.aria-labelledby]="'head'+regiao.id" data-parent="#accordion">
+                        <div class="card-body">
+                                UF :{{regiao.UF.nome}}
+                                <br>sigla : {{regiao.UF.sigla}}
+                                <br>regiao : {{regiao.UF.regiao.sigla}}
+                        </div>
+                </div>
+        </div>
+
+
+
+
